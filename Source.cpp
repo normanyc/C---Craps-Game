@@ -11,9 +11,7 @@ void nickname(int a, int b);
 int main()
 {
 	srand(time(0));
-
 	int counter = 1;
-
 	while (counter < 1000)
 	{
 		cout << "=============================================" << endl;
@@ -42,32 +40,27 @@ int main()
 		else
 		{
 			bool isrolled = false;
-
 			int count = 1;
-
 			while (!isrolled && count < 1000)
 			{
 				cin.ignore();
-
 				count++;
 
 				int a = rand() % 6 + 1;
 				int b = rand() % 6 + 1;
 				int roll = a + b;
-
+				
 				cout << "=============================================" << endl;
 				cout << "Point: " << point << endl << endl;
 				cout << "Dice Roll : " << a << " & " << b << endl;
 				cout << "Dice Total: " << roll << endl << endl;
 				nickname(a, b);
-
-
+				
 				if (point == roll)
 				{
 					cout << "Comments: WINNER!" << endl << endl;
 					isrolled = true;
 				}
-
 				else if (count > 1 && roll == 7)
 				{
 					cout << "Comments: Crap Out Lose!" << endl << endl;
